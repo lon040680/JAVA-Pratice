@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 public class ArrayList_MAX {
     public static void main(String[] args){
         // 假設拿到 一個 int[] 一個 Integer[] 的 Array
-        int[] data = {1, 3, 8, 7, 9, 11, 5, 12, 10};
+        int[] array = {1, 3, 8, 7, 9, 11, 5, 12, 10};
         Integer[] b = new Integer[] {4, 2, 6, 9, 13, 12, 7, 11};
         
-        //List<Integer> _a = Arrays.asList();
+        //List<Integer> _a = Arrays.asList(1, 3, 8, 7, 9, 11, 5, 12, 10); 假設一凱始就拿到這個可以省略下面一些轉換
         
         //轉Integer[] 才能比大小 方法1
-        Integer[] a = Arrays.stream(data).boxed().toArray(Integer[]::new);
+        Integer[] a = Arrays.stream(array).boxed().toArray(Integer[]::new);
         
         //轉Integer[] 才能比大小 方法2
         //List<Integer> list1 = Arrays.stream(data).boxed().collect(Collectors.toList());
@@ -53,7 +53,7 @@ public class ArrayList_MAX {
         System.out.println("將重複完全移除的最終結果：" + bb);
         
         //將int arrays 轉 String arrays
-        String[] str = new String[] {Arrays.toString(data)};
+        String[] str = new String[] {Arrays.toString(array)};
         for(int i = 0; i<str.length; i++){
             System.out.println(str[i]);
         }
